@@ -15,12 +15,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    width:100%;
+    z-index: 1;
 }
 
+
 .logo img {
-    max-width: 50px; /* Ajuste o tamanho conforme necessário */
+    max-width: 75px; /* Ajuste o tamanho conforme necessário */
 }
 
 header h1 {
@@ -34,6 +38,7 @@ nav ul {
     margin: 0;
     display: flex;
     align-items: center;
+    padding-right: 15px;
 }
 
 nav ul li {
@@ -118,6 +123,8 @@ main {
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     text-align: center;
     transition: transform 0.3s;
+    margin-top: 100px;
+    margin-bottom: 20px;
 }
 
 .sobre:hover, .selo-garantia:hover {
@@ -151,4 +158,14 @@ footer {
     bottom: 0;
     width: 100%;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    transform: translateY(80px);
+    transition-duration: 1s;
+}
+footer:hover{
+    transform: translateY(0px);
+    transition-duration: 1s;
+}
+#BombaEgg{
+    width: 50px;
+    opacity: 0.4;
 }
