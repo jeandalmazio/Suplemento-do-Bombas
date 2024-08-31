@@ -1,0 +1,195 @@
+/* styles.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fundo preto */
+    color: #f4f4f4; /* Texto branco */
+}
+
+header {
+    background-color: #b71c1c; /* Fundo vermelho escuro */
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    width:100%;
+    z-index: 1;
+}
+
+
+.logo img {
+    max-width: 75px; /* Ajuste o tamanho conforme necessário */
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffcccb;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background: white;
+    margin: 3px 0;
+    width: 25px;
+    height: 3px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background-color: #b71c1c;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        display: none;
+        padding: 20px 0;
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+}
+
+
+
+main {
+    padding: 20px;
+}
+
+.sobre, .selo-garantia {
+    background-color: #1e1e1e; /* Fundo preto ligeiramente mais claro */
+    border: 1px solid #b71c1c; /* Borda vermelha escura */
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px auto;
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-align: center;
+    transition: transform 0.3s;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.sobre:hover, .selo-garantia:hover {
+    transform: scale(1.02);
+}
+
+.sobre h2, .selo-garantia h2 {
+    color: #ffcccb; /* Texto vermelho claro */
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.sobre p, .selo-garantia p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.selo-garantia #selo {
+    max-width: 150px;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #b71c1c; /* Fundo vermelho escuro */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    transform: translateY(70px);
+    transition-duration: 1s;
+}
+footer:hover{
+    transform: translateY(0px);
+    transition-duration: 1s;
+}
+#BombaEgg{
+    width: 50px;
+    opacity: 0.4;
+}
+#Creatina{
+    width: 300px;
+    height: 200px;
+    float: left;
+    border:#b71c1c solid 10px;
+    border-radius: 20px;
+    margin-left: 20px;
+    
+}
+#HomeS{
+    text-align: center;
+}
+#whey{
+    width: 300px;
+    height: 200px;
+    float: right;
+    border:#b71c1c solid 10px;
+    border-radius: 20px;
+    margin-left: 20px;
+    
+}
